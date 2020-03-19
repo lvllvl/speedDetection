@@ -10,5 +10,5 @@ From [Comma-AI's Speed Challenge](https://github.com/commaai/speedchallenge)
 ```
 ## Evaluation
 - Using mean squared error (mse) to evaluate accuracy of my LSTM model (**goal: <10 mse**)
-
+![](optical_flow_2.gif)
 
