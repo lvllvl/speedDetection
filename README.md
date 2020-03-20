@@ -14,9 +14,18 @@ From [Comma-AI's Speed Challenge](https://github.com/commaai/speedchallenge)
 
 ## Project workflow
 
+### Preparing Training set data with video
+I started with the train.mp4 video, I split this up into individual frames so I could train my LSTM model
+
+<p align="center">
+  <img width="460" height="300" src="dash_cam.gif">
+</p>
+
+
 ### Optical Flow
 I used optical flow to track the motion detected from frame to frame. My plan was to combine the optical flow matrix with the segmentation matrix. That way, the model would be able to use distinct objects as a reference for movement in the frame. 
 
 <p align="center">
   <img width="460" height="300" src="optical_flow_2.gif">
 </p>
+
