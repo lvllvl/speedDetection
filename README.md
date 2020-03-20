@@ -41,7 +41,12 @@ There are 31 potential object categories, though not all objects appear througho
 <p aligh="center">This image is from fasi.ai's segmentation lecture.</p>
 
 
-### One-hot encoding 
-This was a way to prepare segmented images so I could combine them with 
+### One-hot encoding, combining one-hot matrix with optical flow
+Both optical flow images and segmentation images were converted into matrices. One-hot encoding was a way to prepare segmentation matrices. If one of the 31 segmentation categories appeared in the image there'd be a 1 or 1's. Other categories had 0 if were not spotted. 
+
+This preparation helped identify which objects were moving throughout the image. More importantly the LSTM model would be able to identify areas that would allow it to predict speeds at each frame. 
+
+
+### Long Term Short Memory (LSTM) Model 
 
 
