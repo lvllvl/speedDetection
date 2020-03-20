@@ -17,8 +17,6 @@ From [Comma-AI's Speed Challenge](https://github.com/commaai/speedchallenge)
 ### Optical Flow
 I used optical flow to track the motion detected from frame to frame. My plan was to combine the optical flow matrix with the segmentation matrix. That way, the model would be able to use distinct objects as a reference for movement in the frame. 
 
-<div align="center">
-![](optical_flow_2.gif)  
-</div
-
-
+<p align="center">
+  <img width="460" height="300" src="optical_flow_2.gif">
+</p>
