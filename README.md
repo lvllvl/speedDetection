@@ -29,3 +29,12 @@ I used optical flow to track the motion detected from frame to frame. My plan wa
   <img width="460" height="300" src="optical_flow_2.gif">
 </p>
 
+
+### Segmentation 
+Segmentation is a form of image classification but at the pixel level. E.g., Is this pixel part of a sidewalk or lane markings? The pixel is then catagorized by color. The image below is from fasi.ai's segmentation lecture. I used their lecture as a jumping off point, saved their model and used it to segment each frame from train.mp4
+
+<p align="center">
+  <img width="460" height="300" src="SegmentationFastai.png">
+</p>
+
+
