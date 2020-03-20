@@ -10,5 +10,15 @@ From [Comma-AI's Speed Challenge](https://github.com/commaai/speedchallenge)
 ```
 ## Evaluation
 - Using mean squared error (mse) to evaluate accuracy of my LSTM model (**goal: <10 mse**)
-![](optical_flow_2.gif)
+
+
+## Project workflow
+
+### Optical Flow
+I used optical flow to track the motion detected from frame to frame. My plan was to combine the optical flow matrix with the segmentation matrix. That way, the model would be able to use distinct objects as a reference for movement in the frame. 
+
+<p align="center">
+![](optical_flow_2.gif)  
+</p>
+
 
