@@ -15,7 +15,7 @@ From [Comma-AI's Speed Challenge](https://github.com/commaai/speedchallenge)
 ## Project workflow
 
 ### Preparing Training set data with video
-I started with the train.mp4 video, I split this up into individual frames so I could train my LSTM model
+I started with the train.mp4 video, I split this up into individual frames/images so I could manipulate and prepare each one. I started by converting the images to matrices.
 
 <p align="center">
   <img width="460" height="300" src="dash_cam.gif">
