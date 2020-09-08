@@ -44,6 +44,7 @@ again.
 <table>
 <tr> <td> <img src="images/dash_cam.gif"></td><td><img
 src="images/optical_flow_2.gif"></td></tr>
+</table>
 
 For more information and an implementation of optical flow check [this](
 https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_video/py_lucas_kanade/py_lucas_kanade.html
