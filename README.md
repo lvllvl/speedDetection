@@ -46,8 +46,10 @@ again.
 
 #### Optical Flow 
 <table>
-<tr> <td> <img src="images/dash_cam.gif"></td><td><img
-src="images/optical_flow_2.gif"></td></tr>
+<tr> <td> <img src="images/dash_cam.gif">
+dash cam footage </td><td><img
+src="images/optical_flow_2.gif"> 
+a visual representation of optical flow</td></tr>
 </table>
 
 Optical flow is a computer vision tool used for sequential data. In our case
