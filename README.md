@@ -106,7 +106,7 @@ https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_video/py
 
 Recall our segmented image example, we have 31 classes total. Our original video is 17 minutes of driving. All 31 classes are not always present in the frame. For example sometimes there are buildings present and other times there are not. 
 
-There is another way of communicating that fact. In matrix form an image may be size ** 1 x W x H** where **W** = width, **H** = height, and 1 = the number of layers in the matrix. Each pixel is labeled for its corresponding class, but how do we know if a class is not present in the image?
+There is another way of communicating that fact. In matrix form an image may be size **1 x W x H** where **W** = width, **H** = height, and 1 = the number of layers in the matrix. Each pixel is labeled for its corresponding class, but how do we know if a class is not present in the image?
 
 One hot encoding helps display that information. Instead of representing our classes as individual pixels, each class is represented as an individual layer. If the class is not present in the image, the entire layer is filled with 0's. If the class is present, there are 1's wherever the class object is located and 0's everywhere else. In the one hot encoding matrix our new dimensions are now **30 x W x H**. 
 
