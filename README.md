@@ -54,14 +54,11 @@ classes = [ 'Animal', 'Archway', 'Bicyclist', 'Building', 'Car', 'CartLuggagePra
 Once the image is segmented each of the 31 classes are represented in two ways. If the image is in matrix format the class is shown as a number ( e.g., 0 - 30 ), and in image format we differentiate classes by color ( e.g., sidewalks are purple, buildings are orange ). 
 
 Segmenting all our images will allow us to implement other techniques that will
-help us detect the speed at each frame. 
-
-In the following steps we take our image set and process in two separate ways
-( optical flow and one-hot encoding ), later we will combine both image sets
-again. 
+help us detect the speed at each frame. From this point we will create two sets of our segmentation image set. One for our optical flow processing and the other for our one hot encoding processing. 
 
 #### <ins>Optical Flow</ins> 
 <table>
+
 <tr>
 <th> dash cam footage </th>
 <th> optical flow example </th>
@@ -107,23 +104,13 @@ https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_video/py
 <img width="460" height="300" src="images/SegmentationFastai.png">
 </p>
 
-Recall our segmented image example, we have 31 classes total. Since our image
-set spans 20,400 images, not all classes will be represented in each image.
-For instance, sometimes there will be buildings in the image and other times
-not.
+Recall our segmented image example, we have 31 classes total. Our original video is 17 minutes of driving. All 31 classes are not always present in the frame. For example sometimes there are building present and others there are not. 
 
-One hot encoding is a way of formatting our image in matrix format so that we
-know when each of the 31 classes is present or not. We will take our image as a
-matrix of size **W x H**, where **W** = width and **H** = height. Inside the matrix
-representation of the above image each pixel is labeled as 0-30 for each class. 
+There is another way of communicating that fact. In matrix form an image may be size **W x H** where **W** = width and **H** = height. Each pixel is labeled for its corresponding class, but how do we know if a class is not present in the image?
 
-One hot encoding will create 31 layers of this image, so now our image will be
-**30 x W x H**, one for each class. It is important to emphasize that each class
-will get it's own layer. So for example lane markings are labeled as 4, so
-therefore lane markings will be in layer 4 of the matrix. In that layer
-wherever there are lane markings there will be 1's, everywhere else will be
-labeled as 0's. This process is repeated for each class at each layer of the
-matrix. 
+One hot encoding helps display that information. Instead of representing our classes as individual pixels, each class is represented as an individual layer. If the class is not present in the image, the entire layer is filled with 0's. If the class is present, there are 1's wherever the class object is located and 0's everywhere else. In the one hot encoding matrix our new dimensions are now **30 x W x H**. 
+
+As an example, if we wanted to check if there were any buildings in our image we could look at layer 3 of our one hot encoded matrix. 
 
 [Jeremy Jordan](https://www.jeremyjordan.me/content/images/2018/05/Screen-Shot-2018-05-16-at-9.36.00-PM.png) has created a great illustration of this concept, shown below. 
 <p align="center">
