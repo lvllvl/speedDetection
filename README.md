@@ -2,6 +2,11 @@
 
 
 #### Project Workflow 
+We will begin with a video in mp4 format. The video contains dash cam footage
+of a vehicle driving in downtown San Francisco. Our goal is to predict the
+speed of the car at each frame ( 20, 400 total ).
+
+Our workflow will be as follows: 
 
 [ Insert image of the overall workflow ]
 
@@ -111,10 +116,15 @@ matrix.
 
 [Jeremy Jordan](https://www.jeremyjordan.me/content/images/2018/05/Screen-Shot-2018-05-16-at-9.36.00-PM.png) has created a great illustration of this concept, shown below. 
 <p align="center">
-<img width="660" height="500" src="images/oneHotExample.png">
+<img width="660" height="400" src="images/oneHotExample.png">
 </p>
 
-
+It is vital to do this because we will combine this matrix set with our optical
+flow matrix set through matrix multiplication. If the object class is not
+present in the image it will be labeled as 0, and therefore that optical flow
+data will not be relevant or present in our final matrix set. If the object
+class is present, we end up preserving the movement in the matrix
+multiplication. 
 
 
 
