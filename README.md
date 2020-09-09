@@ -104,9 +104,9 @@ https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_video/py
 <img width="460" height="300" src="images/SegmentationFastai.png">
 </p>
 
-Recall our segmented image example, we have 31 classes total. Our original video is 17 minutes of driving. All 31 classes are not always present in the frame. For example sometimes there are building present and others there are not. 
+Recall our segmented image example, we have 31 classes total. Our original video is 17 minutes of driving. All 31 classes are not always present in the frame. For example sometimes there are buildings present and other times there are not. 
 
-There is another way of communicating that fact. In matrix form an image may be size **W x H** where **W** = width and **H** = height. Each pixel is labeled for its corresponding class, but how do we know if a class is not present in the image?
+There is another way of communicating that fact. In matrix form an image may be size ** 1 x W x H** where **W** = width, **H** = height, and 1 = the number of layers in the matrix. Each pixel is labeled for its corresponding class, but how do we know if a class is not present in the image?
 
 One hot encoding helps display that information. Instead of representing our classes as individual pixels, each class is represented as an individual layer. If the class is not present in the image, the entire layer is filled with 0's. If the class is present, there are 1's wherever the class object is located and 0's everywhere else. In the one hot encoding matrix our new dimensions are now **30 x W x H**. 
 
@@ -116,10 +116,7 @@ As an example, if we wanted to check if there were any buildings in our image we
 <p align="center">
 <img width="660" height="400" src="images/oneHotExample.png">
 </p>
+##### <ins>Combining One Hot with Optical Flow</ins> 
+Optical flow preserves the direction of each object. If the optical flow shows that the car is moving towards a building then when we apply matrix multiplication of optical flow and one hot matrices we preserve that movement information. Since our one hot matrix tells us when something is not in an image, when we apply matrix multiplication any optical flow movement at that area will be considered insignificant and will be rendered as 0. 
 
-It is vital to do this because we will combine this matrix set with our optical
-flow matrix set through matrix multiplication. If the object class is not
-present in the image it will be labeled as 0, and therefore that optical flow
-data will not be relevant or present in our final matrix set. If the object
-class is present, we end up preserving the movement in the matrix
-multiplication. 
+In the next step we'll insert these matrices into our LSTM model.
