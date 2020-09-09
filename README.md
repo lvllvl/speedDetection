@@ -25,17 +25,17 @@ After separating the video into 20,400 images we will process each image through
 
 Segmentation is a form of image classification. A typical image classifier has 
 a set number of classes. For example we can make a binary classifier that 
-distinguishes between Adam Sandler or Brad Pitt. 
+distinguishes between Adam Sandler or Brad Pitt. Our classifier will label an image as Adam Sandler if it thinks the entire image resembles Adam Sandler. Likewise with Brad Pitt. 
 
 <p align="center">
 <img width="460" height="300" src="images/AdamBradTogether.jpg">
 </p>
 
-But what if the image contains both Brad Pitt and Adam Sandler? How should the
+But what if the image contains both Brad Pitt *and* Adam Sandler? How should the
 image classifier categorize the image? Segmentation is a way to work around
 this problem. This technique anticipates that both our classes ( Brad Pitt and
 Adam Sandler ) may be in an image at the same time and therefore approaches
-classification differently. Instead of classifying an image as Brad or Adam,
+classification differently. Instead of classifying an *entire* image as Brad or Adam,
 segmentation classifies each pixel as Adam or Brad. 
 
 <p align="center">
