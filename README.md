@@ -111,7 +111,7 @@ matrix.
 
 [Jeremy Jordan](https://www.jeremyjordan.me/content/images/2018/05/Screen-Shot-2018-05-16-at-9.36.00-PM.png) has created a great illustration of this concept, shown below. 
 <p align="center">
-<img width="660" height="400" src="images/oneHotExample.png">
+<img width="660" height="500" src="images/oneHotExample.png">
 </p>
 
 
