@@ -21,8 +21,7 @@ Our workflow will be as follows:
 ## Preparing the dataset
 #### <ins>Segmentation</ins>  
 
-After separating the video into 20,400 images I decided to run each image
-through segmentation. 
+After separating the video into 20,400 images we will process each image through segmentation.
 
 Segmentation is a form of image classification. A typical image classifier has 
 a set number of classes. For example we can make a binary classifier that 
