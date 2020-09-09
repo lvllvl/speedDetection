@@ -42,7 +42,7 @@ segmentation classifies each pixel as either Adam or Brad.
 <img width="460" height="300" src="images/SegmentationFastai.png">
 </p>
 
-So taking the information we gleaned from the Brad and Adam example, let's apply it to our current image set. We have driving footage so we need to figure out a way to categorize each object that appears in our images. [Fast.Ai](https://medium.com/analytics-vidhya/image-segmentation-using-fastai-ddded25f811e) created a segmentation model with the following model. We can see each of the 31 classes below. 
+So taking the information we gleaned from the Brad and Adam example, let's apply it to our current image set. We have driving footage so we need to figure out a way to categorize each object that appears in our images. [Fast.Ai](https://medium.com/analytics-vidhya/image-segmentation-using-fastai-ddded25f811e) created a segmentation model with the following 31 classes below: 
 
 ```
 classes = [ 'Animal', 'Archway', 'Bicyclist', 'Building', 'Car', 'CartLuggagePram', 'Child', 'Column_Pole', 'Fence', 'LaneMkgsDriv',
