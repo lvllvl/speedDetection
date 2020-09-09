@@ -36,11 +36,18 @@ image classifier categorize the image? Segmentation is a way to work around
 this problem. This technique anticipates that both our classes ( Brad Pitt and
 Adam Sandler ) may be in an image at the same time and therefore approaches
 classification differently. Instead of classifying an *entire* image as Brad or Adam,
-segmentation classifies each pixel as Adam or Brad. 
+segmentation classifies each pixel as either Adam or Brad. 
 
 <p align="center">
 <img width="460" height="300" src="images/SegmentationFastai.png">
 </p>
+
+So taking the information we gleaned from the Brad and Adam example, let's apply it to our current image set. We have driving footage so we need to figure out a way to categorize each object that appears in our images. [Fast.Ai](https://medium.com/analytics-vidhya/image-segmentation-using-fastai-ddded25f811e) created a segmentation model with the following model. We can see each of the 31 classes below. 
+
+<p align="center">
+<img width="320" height="70" src="images/SegmentationClasses.png">
+</p>
+
 
 In the context of our speed detection problem we categorized everything in the
 image of the dash cam footage. We used 31 classes to categorize everything from
