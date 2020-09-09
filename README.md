@@ -79,9 +79,9 @@ we're using it to track any movement from image to image. This allows us to see
 which of our classes ( pedestrians, street signs ) are moving through 
 our sequence of images. 
 
-Let's imagine again our image as a matrix. Our matrix has dimensions of 20 x
-30. Optical flow uses small filters ( i.e., a smaller matrix, usually 3 x 3 or
-    5 x 5 ) that hovers over every part of the 20 x 30 matrix and identifies
+Let's imagine again our image as a matrix. Our matrix has dimensions of **20 x
+30**. Optical flow uses small filters ( i.e., a smaller matrix, usually **3 x 3** or
+    **5 x 5** ) that hovers over every part of the **20 x 30** matrix and identifies
 small dense clusters of similar pixels and then compares it to the next
 matrix in the sequence. 
 
@@ -111,11 +111,11 @@ not.
 
 One hot encoding is a way of formatting our image in matrix format so that we
 know when each of the 31 classes is present or not. We will take our image as a
-matrix of size W x H, where W = width and H = height. Inside the matrix
+matrix of size **W x H**, where **W** = width and **H** = height. Inside the matrix
 representation of the above image each pixel is labeled as 0-30 for each class. 
 
 One hot encoding will create 31 layers of this image, so now our image will be
-30 x W x H, one for each class. It is important to emphasize that each class
+**30 x W x H**, one for each class. It is important to emphasize that each class
 will get it's own layer. So for example lane markings are labeled as 4, so
 therefore lane markings will be in layer 4 of the matrix. In that layer
 wherever there are lane markings there will be 1's, everywhere else will be
@@ -133,7 +133,3 @@ present in the image it will be labeled as 0, and therefore that optical flow
 data will not be relevant or present in our final matrix set. If the object
 class is present, we end up preserving the movement in the matrix
 multiplication. 
-
-
-
-
