@@ -8,15 +8,15 @@ speed of the car at each frame ( 20, 400 total ).
 
 Our workflow will be as follows: 
 
-> Video -> 20,400 images -> Segmentation
+> - Video -> 20,400 images -> Segmentation
 >
->Segmentation -> optical flow matrix set 
+> - Segmentation -> optical flow matrix set 
 >
->Segmentation -> one hot encoding matrix set 
+> - Segmentation -> one hot encoding matrix set 
 >
->Combine one hot encoding with optical flow 
+> - Combine one hot encoding with optical flow 
 >
->Long Short Term Memory ( LSTM ) model 
+> - Long Short Term Memory ( LSTM ) model 
 >
 ## Preparing the dataset
 #### <ins>Segmentation</ins>  
