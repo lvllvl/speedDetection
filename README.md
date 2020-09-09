@@ -45,16 +45,10 @@ segmentation classifies each pixel as either Adam or Brad.
 So taking the information we gleaned from the Brad and Adam example, let's apply it to our current image set. We have driving footage so we need to figure out a way to categorize each object that appears in our images. [Fast.Ai](https://medium.com/analytics-vidhya/image-segmentation-using-fastai-ddded25f811e) created a segmentation model with the following model. We can see each of the 31 classes below. 
 
 <p align="center">
-<img width="999" height="170" src="images/SegmentationClasses.png">
+<img width="999" height="200" src="images/SegmentationClasses.png">
 </p>
 
-
-In the context of our speed detection problem we categorized everything in the
-image of the dash cam footage. We used 31 classes to categorize everything from
-buildings ( shown in orange ), to lane markings ( shown in red ). We see all
-the separate classes as distinct colors but the computer sees the image as a
-matrix of numbers. Since we have 31 categories all numbers in the matrix are
-from 0 to 30 ( e.g., lane markings are all labeled as 4 ).
+Once the image is segmented each of the 31 classes are represented in two ways. If the image is in matrix format the class is shown as a number ( e.g., 0 - 30 ), and in image format we differentiate classes by color ( e.g., sidewalks are purple, buildings are orange ). 
 
 Segmenting all our images will allow us to implement other techniques that will
 help us detect the speed at each frame. 
