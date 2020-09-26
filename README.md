@@ -117,4 +117,4 @@ As an example, if we wanted to check if there were any buildings in our image we
 #### <ins>Combining One Hot with Optical Flow</ins> 
 Optical flow preserves the direction of each object. If the optical flow shows that the car is moving towards a building then when we apply matrix multiplication of optical flow and one hot matrices we preserve that movement information. Since our one hot matrix tells us when something is not in an image, when we apply matrix multiplication any optical flow movement at that area will be considered insignificant and will be rendered as 0. 
 
-In the next step we'll insert these matrices into our LSTM model.
+In the next post we'll insert these matrices into our LSTM model.
