@@ -1,8 +1,7 @@
 ## Project Overview 
 
-
 #### Project Workflow 
-We will begin with a video in mp4 format. The video contains dash cam footage
+We will begin with a video in `mp4` format. The video contains dash cam footage
 of a vehicle driving in downtown San Francisco. Our goal is to predict the
 speed of the car at each frame ( 20, 400 total ).
 
@@ -15,6 +14,7 @@ Our workflow will be as follows:
 - Combine one hot encoding with optical flow 
 - Long Short Term Memory ( LSTM ) model 
 ```
+
 ## Preparing the dataset
 #### <ins>Segmentation</ins>  
 
